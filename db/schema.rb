@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 3) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "costume_store", force: :cascade do |t|
+  create_table "costume_stores", force: :cascade do |t|
     t.string "name"
     t.integer "location"
     t.integer "customer_inventory"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 3) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "haunted_house", force: :cascade do |t|
+  create_table "haunted_houses", force: :cascade do |t|
     t.string "name"
     t.integer "location"
     t.string "theme"
