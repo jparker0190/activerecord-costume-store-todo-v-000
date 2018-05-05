@@ -12,20 +12,21 @@
 
 ActiveRecord::Schema.define(version: 3) do
 
-  create_table "costume", force: :cascade do |t|
-    t.string "name"
-    t.integer "price"
-    t.string "image_url"
-    t.integer "size"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "costume_stores", force: :cascade do |t|
     t.string "name"
     t.integer "location"
     t.integer "customer_inventory"
     t.integer "employee_count"
+    t.boolean "in_business"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "costumes", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.string "image_url"
+    t.integer "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,6 +37,8 @@ ActiveRecord::Schema.define(version: 3) do
     t.string "theme"
     t.float "price"
     t.boolean "family_friendly"
+    t.date "opening_date"
+    t.date "closing_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
